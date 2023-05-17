@@ -1,18 +1,17 @@
-org: trainwithshubham
-app: testing-end-to-end
-service: serverless-taskmaster-aws-app
-frameworkVersion: '3'
+org: shreya6
+app: serverless-taskmaster-app
+service: serverless-taskmaster-app
 
 provider:
   name: aws
-  runtime: nodejs14.x
   region: us-east-1
-  iamRoleStatements:
+  runtime: nodejs14.x
+  iamRoleStatements: 
     - Effect: Allow
       Action:
         - dynamodb:*
-      Resource:
-        - arn:aws:dynamodb:us-east-1:626072240565:table/KaamKaro
+      Resource: 
+        - arn:aws:dynamodb:us-east-1:974223007500:table/KaamKaro
 
 functions:
   hello:
@@ -52,4 +51,4 @@ resources:
             AttributeType: S
         KeySchema:
           - AttributeName: id
-            KeyType: HASH
+            KeyType: HASH  
