@@ -6,7 +6,7 @@ provider:
   name: aws
   region: us-east-1
   runtime: nodejs14.x
-  iamRoleStatements: 
+  iam.role.statements: 
     - Effect: Allow
       Action:
         - dynamodb:*
